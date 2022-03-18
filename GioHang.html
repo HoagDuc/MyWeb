@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.0-web/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="Login.html" class="header__navbar-item-link" id="logo">MP</a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="Login.html" class="header__navbar-item-link">
+                            <i class="fa fa-home" aria-hidden="true"></i>Trang chủ
+                        </a>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="GioiThieu.html" class="header__navbar-item-link">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>Giới Thiệu
+                        </a>
+                    </li>
+                    <li class="header__navbar-item dropdown">
+                        <a data-toggle="dropdown" class="header__navbar-item-link dropdown-toggle" href="#">
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                Danh mục sản phẩm <i class="fa-solid fa-sort-down"></i>
+                        </a>
+                        <div class="header__subnav">
+                            <ul class="header__subnav-list">
+                                <li class="header__subnav-item">
+                                    <a class="header__subnav-link" href="#">XIAOMI</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a class="header__subnav-link" href="#">APPLE</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a class="header__subnav-link" href="#">SAMSUNG</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="menu__icons">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="GioHang.html" class="header__navbar-item-link">
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>Giỏ hàng
+                        </a>
+                    </li>
+                    <li class="header__navbar-item" >
+                        <a href="UaThich.html" class="header__navbar-item-link">
+                            <i class="fa fa-heart" aria-hidden="true"></i>Ưa thích
+                        </a>
+                    </li>
+
+                        <!-- Load account -->
+                    <li class="header__navbar-item dropdown" name="non-account" id="account" runat="server">
+
+                    </li>
+                </ul>
+                
+                <!-- <form class="navbar-form navbar-left" style="padding-top: 5px">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form> -->
+                            
+            </nav>
+        </div>
+    </header>
+
+    <main class="GioHang">
+    <div class="container-fluid">
+        <div class="row">
+            <img src="assets/img/hat4.jpg" width="100%" height="auto" alt="" style="min-height: 300px">
+        </div>
+    </div>
+    <div class="container2">
+        <center><h3>GIỎ HÀNG</h3></center>
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="listCart" runat="server">
+                    
+            </div>	
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="thongtindonhang box effect2">
+                    <p><b>Địa điểm:</b><input type="text"></p>
+                    <hr>
+                    <h4>Thông tin đơn hàng</h4>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p id="txtTongsp" runat="server"></p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                            <p id="txtTongTien" runat="server"></p>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <input type="text" class="form-control" placeholder="Nhập mã giảm giá...">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <button class="btn btn-success">ÁP DỤNG</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p>Tổng cộng: </p>	
+                        </div>	
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                            <p style="color:red" id="txtThanhTien" runat="server"></p>
+                        </div>
+                        <center><button class="btn btn-warning" style="width: 90%">Xác nhận đơn hàng</button></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+	<div class="grid">
+		<div class="grid__row">
+			<div class="grid__column-2-5 grid__row-item">
+				<h3 class="fotter__heading-first"><b>MP SHOP</b></h3>
+				<p class="fotter__content">Giao diện được thiết kế để làm bài tập lớn môn lập trình web </p>
+				<p class="fotter__content">Theo dõi MP SHOP</p>
+			</div>
+			<div class="grid__column-2-4 grid__row-item">
+				<h4 class="fotter__heading-second"><b>Thời gian mở cửa</b></h4>
+				<ul class="fotter__list">
+					<li class="fotter__item">Thứ 2 - Thứ 6:8h-19h</li>
+					<li class="fotter__item">Thứ 7 - CN:7h-20h</li>
+					<li class="fotter__item"><p>Phục vụ cả ngày lễ tết</p></li>
+				</ul>
+			</div>
+			<div class="grid__column-2-4 grid__row-item">
+				<h4 class="fotter__heading-second"><b>Điều khoản</b></h4>
+				<ul class="fotter__list">
+					<li class="fotter__item">Bảo mật</li>
+					<li class="fotter__item">Khuyến mại</li>
+					<li class="fotter__item">Mua hàng</li>
+					<li class="fotter__item">Thông tin người dùng</li>
+				</ul>
+			</div>
+			<div class="grid__column-2-4 grid__row-item">
+				<h4 class="fotter__heading-second"><b>Giới Thiệu</b></h4>
+				<ul class="fotter__list">
+					<li class="fotter__item">Địa Chỉ: 96 Định Công</li>
+					<li class="fotter__item">Telephone : + 18001008</li>
+					<li class="fotter__item">Mail: admin@gmail.com</li>
+				</ul>
+			</div>          
+		</div>
+	</div>
+</footer>
+</body>
+</html>
